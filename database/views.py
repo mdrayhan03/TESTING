@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.db import connection
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def index(request) :
     with connection.cursor() as cursor :
             cursor.execute("SELECT * FROM test_tb")
