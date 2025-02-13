@@ -9,5 +9,10 @@
     ],
     "routes": [
         { "src": "/(.*)", "dest": "database/wsgi.py" }
-    ]
+    ],
+    "functions": {
+        "database/wsgi.py": {
+            "includeFiles": ["db.sqlite3"]
+        }
+    }
 }
